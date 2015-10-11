@@ -1,0 +1,2388 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fun Alphabet Learning</title>
+
+<style>
+p{
+position:relative;
+font-family: comic sans ms;
+font-size: 76px;
+font-weight: bold;
+text-align:center;
+}
+
+.moon 
+{ 
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 30px 130px 0 0 rgba(237,245,243,1); 
+  -webkit-box-shadow: 15px 15px 0 0 rgba(237,245,243,1);
+  -moz-box-shadow: 15px 15px 0 0 rgba(237,245,243,1);
+}
+
+.rectangle 
+{
+  margin-top:17px;
+  width: 130px;
+  height: 30px;
+  background: red;
+ }
+
+.triangle-right 
+{  
+  width: 0;
+  height: 0;
+  margin-left:130px;
+  border-top: 30px solid transparent;
+  border-left: 60px solid red;
+  border-bottom: 30px solid transparent; 
+}
+
+.trapezoid {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 60px;
+  height: 0;
+  border: 60px solid rgba(0,0,0,0);
+  border-top: 50px solid rgba(140,29,7,1);
+  border-bottom: 0 solid;
+  color: rgba(0,0,0,1);
+  
+}
+
+.triangle-bottomright 
+{ 
+  position: relative;
+  left:90px;
+  width: 0;
+  height: 0;
+  border-bottom: 70px solid rgba(249,249,209,1);
+  border-left: 50px solid transparent;
+}
+
+.circle {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 150px;
+  height: 150px;
+  border: none;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  color: rgba(0,0,0,1);
+  background: #1abc9c;
+}
+
+.circle-cone 
+{
+  margin-left:0px;
+  float:top;
+  width: 100px;
+  height: 100px;
+  background: green;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%; 
+  background: -webkit-radial-gradient(closest-side, rgba(252,214,234,1) 0, rgba(247,158,196,1) 100%);
+  background: -moz-radial-gradient(closest-side, rgba(252,214,234,1) 0, rgba(247,158,196,1) 100%);
+  background: radial-gradient(closest-side, rgba(252,214,234,1) 0, rgba(247,158,196,1) 100%);
+
+}
+
+.triangle-down 
+{
+  float:bottom;
+  margin-top:-30px;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 120px solid rgba(249,194,122,1);
+}
+
+.diamond {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 50px;
+  height: 0;
+  position: relative;
+  margin: 20px 0 50px;
+  border: 25px solid rgba(0,0,0,0);
+  border-top-width: 0;
+  border-bottom-color: rgba(194,237,252,1);
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+}
+
+.diamond::after {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+  position: absolute;
+  content: "";
+  top: 25px;
+  left: -25px;
+  border: 50px solid rgba(0,0,0,0);
+  border-top: 70px solid rgba(194,237,252,1);
+  border-bottom-width: 0;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  text-shadow: none;
+}
+
+.egg {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 126px;
+  height: 180px;
+  border: none;
+  -webkit-border-radius: 50% / 60% 60% 40% 40%;
+  border-radius: 50% / 60% 60% 40% 40%;
+  color: rgba(0,0,0,1);
+  background: -webkit-linear-gradient(-20.22485943116807deg, rgba(240,244,232,1) 0, rgba(240,244,232,1) 50%, rgba(212,216,203,1) 100%);
+  background: -moz-linear-gradient(110.22485943116807deg, rgba(240,244,232,1) 0, rgba(240,244,232,1) 50%, rgba(212,216,203,1) 100%);
+  background: linear-gradient(110.22485943116807deg, rgba(240,244,232,1) 0, rgba(240,244,232,1) 50%, rgba(212,216,203,1) 100%);
+}
+
+.rectangle_fence 
+{
+  position:absolute;
+  width: 30px;
+  height: 150px;
+  background: -webkit-linear-gradient(90deg, rgba(239,169,93,1) 0, rgba(249,146,49,1) 71%, rgba(249,146,49,1) 100%);
+  background: -moz-linear-gradient(0deg, rgba(239,169,93,1) 0, rgba(249,146,49,1) 71%, rgba(249,146,49,1) 100%);
+  background: linear-gradient(0deg, rgba(239,169,93,1) 0, rgba(249,146,49,1) 71%, rgba(249,146,49,1) 100%);
+}
+
+.triangle-up 
+{
+  position:absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid rgba(249,146,49,1); 
+}
+
+.trapezoid-long {
+  margin-left:15px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 50px;
+  height: 0;
+  border: 50px solid rgba(0,0,0,0);
+  border-top: 150px solid rgba(169,232,242,1);
+  border-bottom: 0 solid;
+  color: rgba(0,0,0,1);
+}
+
+.trapezoid-short {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 150px;
+  height: 0;
+  border: 15px solid rgba(0,0,0,0);
+  border-top: 30px solid rgba(242,252,250,1);
+  border-bottom: 0 solid;
+  color: rgba(0,0,0,1);
+}
+
+.heart { position: relative; width: 100px; height: 90px; } 
+.heart:before, 
+.heart:after { position: absolute; content: ""; left: 50px; top: 0; width: 50px; height: 80px; background: -webkit-linear-gradient(0deg, rgba(255,48,25,1) 0, rgba(207,4,4,1) 100%);
+  background: -moz-linear-gradient(90deg, rgba(255,48,25,1) 0, rgba(207,4,4,1) 100%);
+  background: linear-gradient(90deg, rgba(255,48,25,1) 0, rgba(207,4,4,1) 100%); -moz-border-radius: 50px 50px 0 0; border-radius: 50px 50px 0 0; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); -webkit-transform-origin: 0 100%; -moz-transform-origin: 0 100%; -ms-transform-origin: 0 100%; -o-transform-origin: 0 100%; transform-origin: 0 100%; } 
+.heart:after { left: 0; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); -webkit-transform-origin: 100% 100%; -moz-transform-origin: 100% 100%; -ms-transform-origin: 100% 100%; -o-transform-origin: 100% 100%; transform-origin :100% 100%; }
+
+.jug {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  float:left;
+  width: 120px;
+  height: 150px;
+  border: 2px solid rgba(0,150,255,1);
+  -webkit-border-radius: 0 0 25px 25px;
+  border-radius: 0 0 25px 25px;
+  color: rgba(0,0,0,1);
+  background: rgba(0,150,255,1);
+}
+
+.triangle-topright 
+{
+  float:left;
+  width: 0;
+  height: 0;
+  border-top: 20px solid rgba(0,150,255,0.91);
+  border-left: 20px solid transparent; 
+}
+
+.rhomb {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 80px;
+  height: 80px;
+  margin: 3px 0 0 30px;
+  border: none;
+  color: rgba(0,0,0,1);
+  background: #d4f446;
+  -webkit-transform: rotateZ(-45deg)   ;
+  transform: rotateZ(-45deg)   ;
+  -webkit-transform-origin: 0 100% 0deg;
+  transform-origin: 0 100% 0deg;
+}
+
+.t-triangle 
+{
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red; 
+}
+
+.nail-bottom
+{
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0px;
+  left:-57px;
+  border: 120px solid rgba(0,0,0,0);
+  border-top: 0 solid;
+  border-bottom: 90px solid #1abc9c;
+  color: red;
+  text-shadow: none;
+  -webkit-transform: rotateX(-95.68395178684747deg) rotateY(-16.04281826366305deg) rotateZ(-69.90085100596043deg)   ;
+  transform: rotateX(-95.68395178684747deg) rotateY(-16.04281826366305deg) rotateZ(-69.90085100596043deg)   ;
+}
+
+.nail-top {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 70px;
+  height: 40px;
+  border: none;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  color: rgba(0,0,0,1);
+  background: #1abc9c;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -webkit-transform: rotateX(-24.6371851906254deg) rotateY(51.56620156177409deg)   ;
+  transform: rotateX(-24.6371851906254deg) rotateY(51.56620156177409deg)   ;
+}
+
+.oval {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 150px;
+  height: 75px;
+  border: none;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #1abc9c;
+}
+
+.pacman {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+  margin-left:20px;
+  margin-top: 10px;
+  border: 80px solid #fcf537;
+  border-right-color: rgba(255,255,255,0);
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
+
+.pacman::before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  content: "";
+  top: 50px;
+  left: 80px;
+  border: none;
+  -webkit-border-radius: 10px;
+  border-radius: 15px;
+  background: rgba(255,255,255,1);
+}
+
+.star-5-points {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+  position: relative;
+  margin: 50px 0;
+  border: 100px solid rgba(0,0,0,0);
+  border-top: 0 solid;
+  border-bottom: 70px solid rgba(247,247,98,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  -webkit-transform: rotateZ(35deg)   ;
+  transform: rotateZ(35deg)   ;
+}
+
+.star-5-points::before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+  position: absolute;
+  content: "";
+  top: -45px;
+  left: -65px;
+  border: 30px solid rgba(0,0,0,0);
+  border-top: 0 solid;
+  border-bottom: 80px solid rgba(247,247,98,1);
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  text-shadow: none;
+  -webkit-transform: rotateZ(-35deg)   ;
+  transform: rotateZ(-35deg)   ;
+}
+
+.star-5-points::after {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: -105px;
+  border: 100px solid rgba(0,0,0,0);
+  border-top: 0 solid;
+  border-bottom: 70px solid rgba(247,247,98,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  text-shadow: none;
+  -webkit-transform: rotateZ(-70deg)   ;
+  transform: rotateZ(-70deg)   ;
+}
+
+.t-triangle 
+{
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #fcaee8; 
+}
+
+.umbrella {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 150px;
+  height: 80px;
+  border: 2px solid #35cafc;
+  -webkit-border-radius: 100px 100px 0 0;
+  border-radius: 100px 100px 0 0;
+  background: #35cafc;
+}
+
+.yin-yang { width: 96px; height: 48px; background: #eee; border-color: red; border-style: solid; border-width: 2px 2px 50px 2px; border-radius: 100%; position: relative; } 
+.yin-yang:before { content: ""; position: absolute; top: 50%; left: 0; background: #eee; border: 18px solid red; border-radius: 100%; width: 12px; height: 12px; } 
+.yin-yang:after { content: ""; position: absolute; top: 50%; left: 50%; background: red; border: 18px solid #eee; border-radius:100%; width: 12px; height: 12px; }
+
+.zigzag {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 180px;
+  height: 180px;
+  border: none;
+  background: -webkit-linear-gradient(-45deg, rgb(236,237,220) 25%, rgba(0,0,0,0) 25%), -webkit-linear-gradient(-135deg, rgb(236,237,220) 25%, rgba(0,0,0,0) 25%), -webkit-linear-gradient(-225deg, rgb(236,237,220) 25%, rgba(0,0,0,0) 25%), -webkit-linear-gradient(45deg, rgb(236,237,220) 25%, rgba(0,0,0,0) 25%), rgb(23, 148, 236);
+  background: -moz-linear-gradient(135deg, rgb(236,237,220) 25%, rgba(0,0,0,0) 25%), -moz-linear-gradient(225deg, rgb(236,237,220) 25%, rgba(0,0,0,0) 25%), -moz-linear-gradient(315deg, rgb(236,237,220) 25%, rgba(0,0,0,0) 25%), -moz-linear-gradient(45deg, rgb(236,237,220) 25%, rgba(0,0,0,0) 25%), rgb(23, 148, 236);
+  background: linear-gradient(135deg, rgb(236,237,220) 25%, rgba(0,0,0,0) 25%), linear-gradient(225deg, rgb(236,237,220) 25%, rgba(0,0,0,0) 25%), linear-gradient(315deg, rgb(236,237,220) 25%, rgba(0,0,0,0) 25%), linear-gradient(45deg, rgb(236,237,220) 25%, rgba(0,0,0,0) 25%), rgb(23, 148, 236);
+  background-position: -50px 0, -50px 0, 0 0, 0 0;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: 100px 100px;
+  background-size: 100px 100px;
+}
+
+.outline
+{
+  position:absolute;
+ -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 180px;
+  height: 180px;
+  border: none;
+  background:#62676b;
+  padding:10px;
+  -webkit-box-shadow: 10px 11px 5px -4px rgba(13,14,15,0.91) ;
+  box-shadow: 10px 11px 5px -4px rgba(13,14,15,0.91) ;
+}
+
+#alpha > div
+{
+	display: none;
+}
+#alpha > div:target
+{
+	display: block;
+}
+
+
+</style>
+
+</head>
+
+
+<body style="background-color:#d3f990">
+
+<div id="alpha">
+	<div id="alpha1">
+		<p>Aa</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div style="margin-top:80px; margin-left:0px">
+		<div class="rectangle "></div>
+		<div class="triangle-right" , style="margin-top:-47px;"></div>
+		</div>
+		</div>
+	</div>
+	<div id="alpha2">
+		<p>Bb</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div style="margin-top:30px; margin-left:0px">
+		<div class="triangle-bottomright "></div>
+		<div class="trapezoid"></div>
+		</div>
+		</div>		
+	</div>
+
+	<div id="alpha3">
+		<p>Cc</p>
+		<div class="outline", style="top:35%; left:42%">
+   		<div class="circle" , style= "margin-top:15px; margin-left:15px"></div>
+		</div>
+	</div>
+
+	
+	<div id="alpha4">
+		<p>Dd</p>
+		<div class="outline", style="top:35%; left:42%">
+   		<div class="diamond" , style= "margin-top:45px; margin-left:45px"></div>
+		</div>
+	</div>
+
+	<div id="alpha5">
+                <p>Ee</p>
+		<div class="outline", style="top:35%; left:42%;">
+		<div class="egg" , style= "margin:auto; "></div>
+		</div>
+	</div>
+
+
+	<div id="alpha6">
+                <p>Ff</p>
+		<div class="outline", style="top:35%; left:42%;">
+		<div style="margin-top:-2px;">
+		<div class="triangle-up" , style="margin-left:15px;"></div>
+		<div class="triangle-up" , style="margin-left:75px;"></div>
+		<div class="triangle-up" , style="margin-left:135px;"></div>
+		<div class="rectangle_fence" , style="margin-left:15px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="margin-left:75px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="margin-left:135px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:180px; margin-left:0px; margin-top:120px"></div>
+		</div>
+		</div>
+	</div>
+
+	<div id="alpha7">
+                <p>Gg</p>
+		<div class="outline", style="top:35%; left:42%;">
+		<div style="margin-top:0px; margin-left:0px">
+		<div class="trapezoid-short"></div>
+		<div class="trapezoid-long"></div>
+		</div>
+		</div>
+	</div>
+
+	<div id="alpha8">
+		<p>Hh</p>
+		<div class="outline", style="top:35%; left:42%">
+   		<div class="heart" , style= "margin-top:45px; margin-left:45px"></div>
+		</div>
+	</div>
+
+	<div id="alpha9">
+		<p>Ii</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div style="margin-top:-2px; margin-left:40px">
+		<div class="circle-cone"></div>
+		<div class="triangle-down"></div>
+		</div></div>
+	</div>
+
+	<div id="alpha10">
+		<p>Jj</p>
+		<div class="outline", style="top:35%; left:42%">
+
+		<div style="margin-top:-5px; margin-left:5px">
+		<div class="triangle-topright"></div>
+		<div class="jug"></div>
+		<div>
+		<div class="rectangle" , style="height:80px; width:30px; background:rgba(0,150,255,1); z-index:0; top:0; margin-left:140px">
+		<div class="rectangle" , style="height:60px; width:15px; background:#62676b; z-index:0; top:10px; left:3px; position:relative"></div>
+		</div>
+		</div>
+		</div>
+		</div>
+	</div>
+
+	<div id="alpha11">
+		<p>Kk</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div style="margin-top:42px; margin-left:25px">
+		<div class="rhomb"></div>
+		<div class="t-triangle" , style="border-left-width:12px; border-right-width:12px; border-bottom-width:24px; margin-left:57px"  ></div>
+		</div>
+		</div>
+	</div>
+
+	<div id="alpha12">
+		<p>Ll</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div style="margin-top:0px; margin-left:15px">
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:20px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:80px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:140px"></div>
+		<div class="rectangle_fence" , style="height:180px; width:30px; margin-left:0px; margin-top:0px"></div>
+		<div class="rectangle_fence" , style="height:180px; width:30px; margin-left:120px; margin-top:0px"></div>
+		</div>
+		</div>
+	</div>
+
+	<div id="alpha13">
+		<p>Mm</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div class="moon" , style="margin-top:15px; margin-left:15px"></div></div>
+	</div>
+
+	<div id="alpha14">
+		<p>Nn</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div class="nail-top" , style="margin-top:50px; margin-left:30px"></div>
+		<div class="nail-bottom" , style="margin-top:50px; margin-left:30px"></div>
+		</div>
+	</div>
+
+	<div id="alpha15">
+		<p>Oo</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div class="oval" , style="margin-top:50px; margin-left:15px"></div></div>
+	</div>
+
+	<div id="alpha16">
+		<p>Pp</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div class="pacman"></div></div>
+	</div>
+
+	<div id="alpha17">
+		<p>Qq</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:35px; margin-left:40px"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:40px"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:35px; margin-left:90px; background:red;"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:90px"></div>
+		</div>
+	</div>
+
+	<div id="alpha18">
+		<p>Rr</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div class="rectangle" , style="height:80px; width:150px; position:absolute; top:45px; margin-left:15px; background:white;"></div>
+		</div>
+	</div>
+
+	<div id="alpha19">
+		<p>Ss</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div class="star-5-points" , style="top:7px; left:-6px;"></div>
+		</div>
+	</div>
+
+	<div id="alpha20">
+		<p>Tt</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div class="t-triangle" , style="margin-top:35px; margin-left:37px;"></div>
+		</div>
+	</div>
+
+	<div id="alpha21">
+		<p>Uu</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div class="umbrella" , style="margin-top:0px; margin-left:15px;"></div>
+		<div class="rectangle" , style="height:90px; width:10px; position:absolute; top:77px; margin-left:88px; background-color:brown;"></div>
+		</div>
+	</div>
+
+	<div id="alpha22">
+		<p>Vv</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div class="rectangle" , style="height:90px; width:30px; position:absolute; top:0px; margin-left:75px; background-color:#fc99f7;"></div>
+		<div class="circle" , style="height:100px; width:100px; margin-top:70px; margin-left:40px; background-color:#fc99f7;"></div>
+		<div class="rectangle" , style="height:10px; width:30px; position:absolute; top:155px; margin-left:75px; background-color:#fc99f7;"></div>
+		</div>
+	</div>
+
+	<div id="alpha23">
+		<p>Ww</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div style="margin-top:12px; margin-left:10px;">
+		<div class="rectangle" , style="height:150px; width:150px; position:absolute; top:5px; margin-left:5px; background-color:brown"></div>
+		<div class="rectangle" , style="height:60px; width:60px; position:absolute; top:15px; margin-left:15px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; position:absolute; top:85px; margin-left:15px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; position:absolute; top:15px; margin-left:85px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; position:absolute; top:85px; margin-left:85px; background-color:#b6edec"></div>
+		</div>
+		</div>
+	</div>
+
+	<div id="alpha24">
+		<p>Xx</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div class="rectangle" , style="height:20px; width:200px; background:rgba(0,150,255,1); position:absolute; top:40px; margin-left:-10px; background:black;"></div>
+		<div class="rectangle" , style="height:20px; width:200px; background:rgba(0,150,255,1); position:absolute; top:110px; margin-left:-10px; background:black;"></div>
+		<div class="rectangle" , style="height:150px; width:30px; background:rgba(0,150,255,1); position:absolute; top:10px; margin-left:-5px; background:red;"></div>
+		<div class="rectangle" , style="height:140px; width:30px; background:rgba(0,150,255,1); position:absolute; top:15px; margin-left:35px; background:green;"></div>
+		<div class="rectangle" , style="height:130px; width:30px; background:rgba(0,150,255,1); position:absolute; top:20px; margin-left:75px; background:yellow;"></div>
+		<div class="rectangle" , style="height:120px; width:30px; background:rgba(0,150,255,1); position:absolute; top:25px; margin-left:115px; background:purple;"></div>
+		<div class="rectangle" , style="height:110px; width:30px; background:rgba(0,150,255,1); position:absolute; top:30px; margin-left:155px; background:blue;"></div>
+		</div>
+	</div>
+
+	<div id="alpha25">
+		<p>Yy</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div class="yin-yang" , style="margin-top:40px; margin-left:40px"></div></div>
+	</div>
+
+	<div id="alpha26">
+		<p>Zz</p>
+		<div class="outline", style="top:35%; left:42%">
+		<div class="zigzag"></div></div>
+	</div>
+<div id="quiz">
+		<p>Aa</p>
+		<a href="#A1">
+		<div>
+		<div class="outline", style="top:25%; left:30%">
+		<div style="margin-top:80px; margin-left:0px">
+		<div class="rectangle "></div>
+		<div class="triangle-right" , style="margin-top:-47px;"></div>
+		</div>
+		</div>
+		</div>
+		</a>
+	<div>
+		<a href="#A2">
+		<div class="outline", style="top:65%; left:30%">
+		<div style="margin-top:-2px; margin-left:40px">
+		<div class="circle-cone"></div>
+		<div class="triangle-down"></div>
+		</div></div>
+		</a>
+	</div>
+	<div>
+		<a href="#A2">
+		<div class="outline", style="top:25%; left:60%">
+   		<div class="diamond" , style= "margin-top:45px; margin-left:45px"></div>
+		</div>
+		</a>
+	</div>
+	<div>
+		<a href="#A2">
+		<div class="outline", style="top:65%; left:60%">
+		<div class="rectangle" , style="height:90px; width:30px; position:absolute; top:0px; margin-left:75px; background-color:#fc99f7;"></div>
+		<div class="circle" , style="height:100px; width:100px; margin-top:70px; margin-left:40px; background-color:#fc99f7;"></div>
+		<div class="rectangle" , style="height:10px; width:30px; position:absolute; top:155px; margin-left:75px; background-color:#fc99f7;"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="A1">
+		<p>Correct</p>
+		<a href="#Bb" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="A2">
+		<p>InCorrect</p>
+		<a href="#Bb" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+
+
+<div id="Bb">
+		<p>Bb</p>
+		<div>
+		<a href="#B2">
+		<div class="outline", style="top:25%; left:30%">
+		<div style="margin-top:12px; margin-left:10px;">
+		<div class="rectangle" , style="height:150px; width:150px; background:rgba(0,150,255,1); position:absolute; top:5px; margin-left:5px; background-color:brown"></div>
+		<div class="rectangle" , style="height:60px; width:60px; background:rgba(0,150,255,1); position:absolute; top:15px; margin-left:15px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:15px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; background:rgba(0,150,255,1); position:absolute; top:15px; margin-left:85px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:85px; background-color:#b6edec"></div>
+		</div>
+		</div>
+		</a>
+		</div>
+
+	<div>
+		<a href="#B2">
+		<div class="outline", style="top:65%; left:30%">
+		<div style="margin-top:-2px; margin-left:40px">
+		<div class="circle-cone"></div>
+		<div class="triangle-down"></div>
+		</div></div>
+		</a>
+	</div>
+	<div>
+		<a href="#B1">
+		<div class="outline", style="top:25%; left:60%">
+		<div style="margin-top:30px; margin-left:0px">
+		<div class="triangle-bottomright "></div>
+		<div class="trapezoid"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+	<div>
+		<a href="#B2">
+		<div class="outline", style="top:65%; left:60%">
+		<div class="umbrella" , style="margin-top:0px; margin-left:15px;"></div>
+		<div class="rectangle" , style="height:90px; width:10px; position:absolute; top:77px; margin-left:88px; background-color:brown;"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="B1">
+		<p>Correct</p>
+		<a href="#Cc" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="B2">
+		<p>InCorrect</p>
+		<a href="#Cc" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+
+<div id="Cc">
+		<p>Cc</p>
+		<div>
+		<a href="#C2">
+		<div class="outline", style="top:25%; left:30%">
+		<div class="t-triangle" , style="margin-top:35px; margin-left:37px;"></div>
+		</div>
+		</a>
+		</div>
+
+	<div>
+		<a href="#C2">
+		<div class="outline", style="top:65%; left:30%">
+		<div style="margin-top:-2px; margin-left:40px">
+		<div class="circle-cone"></div>
+		<div class="triangle-down"></div>
+		</div></div>
+		</a>
+	</div>
+	<div>
+		<a href="#C2">
+		<div class="outline", style="top:25%; left:60%">
+		<div class="star-5-points" , style="top:7px; left:-6px;"></div>
+		</div>
+		</a>
+	</div>
+	<div>
+		<a href="#C1">
+		<div class="outline", style="top:65%; left:60%">
+   		<div class="circle" , style= "margin-top:15px; margin-left:15px"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="C1">
+		<p>Correct</p>
+		<a href="#Dd" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="C2">
+		<p>InCorrect</p>
+		<a href="#Dd" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+
+<div id="Dd">
+		<p>Dd</p>
+		<div>
+		<a href="#D1">
+		<div class="outline", style="top:25%; left:30%">
+   		<div class="diamond" , style= "margin-top:45px; margin-left:45px"></div>
+		</div>
+		</a>
+		</div>
+
+	<div>
+		<a href="#D2">
+		<div class="outline", style="top:65%; left:30%">
+		<div class="yin-yang" , style="margin-top:40px; margin-left:40px"></div>
+		</div>
+		</a>
+	</div>
+	<div>
+		<a href="#D2">
+		<div class="outline", style="top:25%; left:60%">
+		<div class="star-5-points" , style="top:7px; left:-6px;"></div>
+		</div>
+		</a>
+	</div>
+	<div>
+		<a href="#D2">
+		<div class="outline", style="top:65%; left:60%">
+		<div class="rectangle" , style="height:20px; width:200px; background:rgba(0,150,255,1); position:absolute; top:40px; margin-left:-10px; background:black;"></div>
+		<div class="rectangle" , style="height:20px; width:200px; background:rgba(0,150,255,1); position:absolute; top:110px; margin-left:-10px; background:black;"></div>
+		<div class="rectangle" , style="height:150px; width:30px; background:rgba(0,150,255,1); position:absolute; top:10px; margin-left:-5px; background:red;"></div>
+		<div class="rectangle" , style="height:140px; width:30px; background:rgba(0,150,255,1); position:absolute; top:15px; margin-left:35px; background:green;"></div>
+		<div class="rectangle" , style="height:130px; width:30px; background:rgba(0,150,255,1); position:absolute; top:20px; margin-left:75px; background:yellow;"></div>
+		<div class="rectangle" , style="height:120px; width:30px; background:rgba(0,150,255,1); position:absolute; top:25px; margin-left:115px; background:purple;"></div>
+		<div class="rectangle" , style="height:110px; width:30px; background:rgba(0,150,255,1); position:absolute; top:30px; margin-left:155px; background:blue;"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="D1">
+		<p>Correct</p>
+		<a href="#Ee" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="D2">
+		<p>InCorrect</p>
+		<a href="#Ee" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Ee">
+		<p>Ee</p>
+		<div>
+		<a href="#E2">
+		<div class="outline", style="top:25%; left:30%">
+		<div class="zigzag"></div>
+		</div>
+		</a>
+		</div>
+
+	<div>
+		<a href="#E1">
+		<div class="outline", style="top:65%; left:30%">
+		<div class="egg" , style= "margin:auto; "></div>
+		</div>
+		</a>
+	</div>
+	<div>
+		<a href="#E2">
+		<div class="outline", style="top:25%; left:60%">
+		<div class="nail-top" , style="margin-top:50px; margin-left:30px"></div>
+		<div class="nail-bottom" , style="margin-top:50px; margin-left:30px"></div>
+		</div>
+		</a>
+	</div>
+	<div>
+		<a href="#E2">
+		<div class="outline", style="top:65%; left:60%">
+		<div class="rectangle" , style="height:90px; width:30px; position:absolute; top:0px; margin-left:75px; background-color:#fc99f7;"></div>
+		<div class="circle" , style="height:100px; width:100px; margin-top:70px; margin-left:40px; background-color:#fc99f7;"></div>
+		<div class="rectangle" , style="height:10px; width:30px; position:absolute; top:155px; margin-left:75px; background-color:#fc99f7;"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="E1">
+		<p>Correct</p>
+		<a href="#Ff" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="E2">
+		<p>InCorrect</p>
+		<a href="#Ff" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+
+<div id="Ff">
+
+		<p>Ff</p>
+		<div>
+		<a href="#F1">
+		<div class="outline", style="top:25%; left:30%">
+		<div style="margin-top:-2px;">
+		<div class="triangle-up" , style="margin-left:15px;"></div>
+		<div class="triangle-up" , style="margin-left:75px;"></div>
+		<div class="triangle-up" , style="margin-left:135px;"></div>
+		<div class="rectangle_fence" , style="margin-left:15px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="margin-left:75px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="margin-left:135px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:180px; margin-left:0px; margin-top:120px"></div>
+		</div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#F2">
+		<div class="outline", style="top:65%; left:30%">
+		<div style="margin-top:80px; margin-left:0px">
+		<div class="rectangle "></div>
+		<div class="triangle-right" , style="margin-top:-47px;"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#F2">
+		<div class="outline", style="top:25%; left:60%">
+		<div class="oval" , style="margin-top:50px; margin-left:15px"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#F2">
+		<div class="outline", style="top:65%; left:60%">
+		<div class="moon" , style="margin-top:15px; margin-left:15px"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="F1">
+		<p>Correct</p>
+		<a href="#Gg" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="F2">
+		<p>InCorrect</p>
+		<a href="#Gg" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Gg">
+
+		<p>Gg</p>
+		<div>
+		<a href="#G2">
+		<div class="outline", style="top:25%; left:30%">
+		<div class="pacman"></div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#G1">
+		<div class="outline", style="top:65%; left:30%">
+		<div style="margin-top:0px; margin-left:0px">
+		<div class="trapezoid-short"></div>
+		<div class="trapezoid-long"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#G2">
+		<div class="outline", style="top:25%; left:60%">
+		<div style="margin-top:30px; margin-left:0px">
+		<div class="triangle-bottomright "></div>
+		<div class="trapezoid"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#G2">
+		<div class="outline", style="top:65%; left:60%">
+		<div style="margin-top:-5px; margin-left:5px">
+		<div class="triangle-topright"></div>
+		<div class="jug"></div>
+		<div>
+		<div class="rectangle" , style="height:80px; width:30px; background:rgba(0,150,255,1); z-index:0; top:0; margin-left:140px">
+		<div class="rectangle" , style="height:60px; width:15px; background:#62676b; z-index:0; top:10px; left:3px; position:relative"></div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="G1">
+		<p>Correct</p>
+		<a href="#Hh" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="G2">
+		<p>InCorrect</p>
+		<a href="#Hh" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Hh">
+
+		<p>Hh</p>
+		<div>
+		<a href="#H2">
+		<div class="outline", style="top:25%; left:30%">
+		<div class="star-5-points" , style="top:7px; left:-6px;"></div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#H2">
+		<div class="outline", style="top:65%; left:30%">
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:35px; margin-left:40px"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:40px"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:35px; margin-left:90px; background:red;"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:90px"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#H2">
+		<div class="outline", style="top:25%; left:60%">
+		<div class="t-triangle" , style="margin-top:35px; margin-left:37px;"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#H1">
+		<div class="outline", style="top:65%; left:60%">
+   		<div class="heart" , style= "margin-top:45px; margin-left:45px"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="H1">
+		<p>Correct</p>
+		<a href="#Ii" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="H2">
+		<p>InCorrect</p>
+		<a href="#Ii" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Ii">
+
+		<p>Ii</p>
+		<div>
+		<a href="#I2">
+		<div class="outline", style="top:25%; left:30%">
+		<div class="star-5-points" , style="top:7px; left:-6px;"></div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#I1">
+		<div class="outline", style="top:65%; left:30%">
+		<div style="margin-top:-2px; margin-left:40px">
+		<div class="circle-cone"></div>
+		<div class="triangle-down"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#I2">
+		<div class="outline", style="top:25%; left:60%">
+		<div style="margin-top:12px; margin-left:10px;">
+		<div class="rectangle" , style="height:150px; width:150px; background:rgba(0,150,255,1); position:absolute; top:5px; margin-left:5px; background-color:brown"></div>
+		<div class="rectangle" , style="height:60px; width:60px; background:rgba(0,150,255,1); position:absolute; top:15px; margin-left:15px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:15px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; background:rgba(0,150,255,1); position:absolute; top:15px; margin-left:85px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:85px; background-color:#b6edec"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#I2">
+		<div class="outline", style="top:65%; left:60%">
+		<div style="margin-top:42px; margin-left:25px">
+		<div class="rhomb"></div>
+		<div class="t-triangle" , style="border-left-width:12px; border-right-width:12px; border-bottom-width:24px; margin-left:57px"  ></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="I1">
+		<p>Correct</p>
+		<a href="#Jj" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="I2">
+		<p>InCorrect</p>
+		<a href="#Jj" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Jj">
+
+		<p>Jj</p>
+		<div>
+		<a href="#J1">
+		<div class="outline", style="top:25%; left:30%">
+		<div style="margin-top:-5px; margin-left:5px">
+		<div class="triangle-topright"></div>
+		<div class="jug"></div>
+		<div>
+		<div class="rectangle" , style="height:80px; width:30px; background:rgba(0,150,255,1); z-index:0; top:0; margin-left:140px">
+		<div class="rectangle" , style="height:60px; width:15px; background:#62676b; z-index:0; top:10px; left:3px; position:relative"></div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#J2">
+		<div class="outline", style="top:65%; left:30%">
+		<div class="egg" , style= "margin:auto; "></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#J2">
+		<div class="outline", style="top:25%; left:60%">
+		<div class="yin-yang" , style="margin-top:40px; margin-left:40px"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#J2">
+		<div class="outline", style="top:65%; left:60%">
+		<div class="pacman"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="J1">
+		<p>Correct</p>
+		<a href="#Kk" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="J2">
+		<p>InCorrect</p>
+		<a href="#Kk" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Kk">
+
+		<p>Kk</p>
+		<div>
+		<a href="#K2">
+		<div class="outline", style="top:25%; left:30%">
+		<div class="umbrella" , style="margin-top:0px; margin-left:15px;"></div>
+		<div class="rectangle" , style="height:90px; width:10px; position:absolute; top:77px; margin-left:88px; background-color:brown;"></div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#K2">
+		<div class="outline", style="top:65%; left:30%">
+		<div class="zigzag"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#K2">
+		<div class="outline", style="top:25%; left:60%">
+		<div class="rectangle" , style="height:80px; width:150px; background:rgba(0,150,255,1); position:absolute; top:45px; margin-left:15px; background:white;"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#K1">
+		<div class="outline", style="top:65%; left:60%">
+		<div style="margin-top:42px; margin-left:25px">
+		<div class="rhomb"></div>
+		<div class="t-triangle" , style="border-left-width:12px; border-right-width:12px; border-bottom-width:24px; margin-left:57px"  ></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="K1">
+		<p>Correct</p>
+		<a href="#Ll" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="K2">
+		<p>InCorrect</p>
+		<a href="#Ll" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Ll">
+
+		<p>Ll</p>
+		<div>
+		<a href="#L2">
+		<div class="outline", style="top:25%; left:30%">
+   		<div class="circle" , style= "margin-top:15px; margin-left:15px"></div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#L1">
+		<div class="outline", style="top:65%; left:30%">
+		<div style="margin-top:0px; margin-left:15px">
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:20px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:80px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:140px"></div>
+		<div class="rectangle_fence" , style="height:180px; width:30px; margin-left:0px; margin-top:0px"></div>
+		<div class="rectangle_fence" , style="height:180px; width:30px; margin-left:120px; margin-top:0px"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#L2">
+		<div class="outline", style="top:25%; left:60%">
+   		<div class="diamond" , style= "margin-top:45px; margin-left:45px"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#L2">
+		<div class="outline", style="top:65%; left:60%">
+		<div class="rectangle" , style="height:90px; width:30px; position:absolute; top:0px; margin-left:75px; background-color:#fc99f7;"></div>
+		<div class="circle" , style="height:100px; width:100px; margin-top:70px; margin-left:40px; background-color:#fc99f7;"></div>
+		<div class="rectangle" , style="height:10px; width:30px; position:absolute; top:155px; margin-left:75px; background-color:#fc99f7;"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="L1">
+		<p>Correct</p>
+		<a href="#Mm" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="L2">
+		<p>InCorrect</p>
+		<a href="#Mm" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Mm">
+
+		<p>Mm</p>
+		<div>
+		<a href="#M2">
+		<div class="outline", style="top:25%; left:30%">
+		<div class="rectangle" , style="height:90px; width:30px; position:absolute; top:0px; margin-left:75px; background-color:#fc99f7;"></div>
+		<div class="circle" , style="height:100px; width:100px; margin-top:70px; margin-left:40px; background-color:#fc99f7;"></div>
+		<div class="rectangle" , style="height:10px; width:30px; position:absolute; top:155px; margin-left:75px; background-color:#fc99f7;"></div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#M2">
+		<div class="outline", style="top:65%; left:30%">
+		<div style="margin-top:30px; margin-left:0px">
+		<div class="triangle-bottomright "></div>
+		<div class="trapezoid"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#M1">
+		<div class="outline", style="top:25%; left:60%">
+		<div class="moon" , style="margin-top:15px; margin-left:15px"></div>	 
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#M2">
+		<div class="outline", style="top:65%; left:60%">
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:35px; margin-left:40px"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:40px"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:35px; margin-left:90px; background:red;"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:90px"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="M1">
+		<p>Correct</p>
+		<a href="#Nn" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="M2">
+		<p>InCorrect</p>
+		<a href="#Nn" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Nn">
+
+		<p>Nn</p>
+		<div>
+		<a href="#N2">
+		<div class="outline", style="top:25%; left:30%">
+		<div style="margin-top:0px; margin-left:15px">
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:20px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:80px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:140px"></div>
+		<div class="rectangle_fence" , style="height:180px; width:30px; margin-left:0px; margin-top:0px"></div>
+		<div class="rectangle_fence" , style="height:180px; width:30px; margin-left:120px; margin-top:0px"></div>
+		</div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#N1">
+		<div class="outline", style="top:65%; left:30%">
+		<div class="nail-top" , style="margin-top:50px; margin-left:30px"></div>
+		<div class="nail-bottom" , style="margin-top:50px; margin-left:30px"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#N2">
+		<div class="outline", style="top:25%; left:60%">
+		<div class="star-5-points" , style="top:7px; left:-6px;"></div>	 
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#N2">
+		<div class="outline", style="top:65%; left:60%">
+		<div style="margin-top:0px; margin-left:0px">
+		<div class="trapezoid-short"></div>
+		<div class="trapezoid-long"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="N1">
+		<p>Correct</p>
+		<a href="#Oo" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="N2">
+		<p>InCorrect</p>
+		<a href="#Oo" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Oo">
+
+		<p>Oo</p>
+		<div>
+		<a href="#O2">
+		<div class="outline", style="top:25%; left:30%">
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:35px; margin-left:40px"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:40px"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:35px; margin-left:90px; background:red;"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:90px"></div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#O2">
+		<div class="outline", style="top:65%; left:30%">
+		<div class="umbrella" , style="margin-top:0px; margin-left:15px;"></div>
+		<div class="rectangle" , style="height:90px; width:10px; position:absolute; top:77px; margin-left:88px; background-color:brown;"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#O2">
+		<div class="outline", style="top:25%; left:60%">
+		<div style="margin-top:80px; margin-left:0px">
+		<div class="rectangle "></div>
+		<div class="triangle-right" , style="margin-top:-47px;"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#O1">
+		<div class="outline", style="top:65%; left:60%">
+		<div class="oval" , style="margin-top:50px; margin-left:15px"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="O1">
+		<p>Correct</p>
+		<a href="#Pp" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="O2">
+		<p>InCorrect</p>
+		<a href="#Pp" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Pp">
+
+		<p>Pp</p>
+		<div>
+		<a href="#P1">
+		<div class="outline", style="top:25%; left:30%">
+		<div class="pacman"></div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#P2">
+		<div class="outline", style="top:65%; left:30%">
+		<div style="margin-top:-2px;">
+		<div class="triangle-up" , style="margin-left:15px;"></div>
+		<div class="triangle-up" , style="margin-left:75px;"></div>
+		<div class="triangle-up" , style="margin-left:135px;"></div>
+		<div class="rectangle_fence" , style="margin-left:15px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="margin-left:75px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="margin-left:135px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:180px; margin-left:0px; margin-top:120px"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#P2">
+		<div class="outline", style="top:25%; left:60%">
+		<div class="t-triangle" , style="margin-top:35px; margin-left:37px;"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#P2">
+		<div class="outline", style="top:65%; left:60%">
+		<div style="margin-top:42px; margin-left:25px">
+		<div class="rhomb"></div>
+		<div class="t-triangle" , style="border-left-width:12px; border-right-width:12px; border-bottom-width:24px; margin-left:57px"  ></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="P1">
+		<p>Correct</p>
+		<a href="#Qq" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="P2">
+		<p>InCorrect</p>
+		<a href="#Qq" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Qq">
+
+		<p>Qq</p>
+		<div>
+		<a href="#Q2">
+		<div class="outline", style="top:25%; left:30%">
+		<div style="margin-top:30px; margin-left:0px">
+		<div class="triangle-bottomright "></div>
+		<div class="trapezoid"></div>
+		</div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#Q1">
+		<div class="outline", style="top:65%; left:30%">
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:35px; margin-left:40px"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:40px"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:35px; margin-left:90px; background:red;"></div>
+		<div class="rectangle" , style="height:50px; width:50px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:90px"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#Q2">
+		<div class="outline", style="top:25%; left:60%">
+   		<div class="heart" , style= "margin-top:45px; margin-left:45px"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#Q2">
+		<div class="outline", style="top:65%; left:60%">
+		<div style="margin-top:42px; margin-left:25px">
+		<div class="rhomb"></div>
+		<div class="t-triangle" , style="border-left-width:12px; border-right-width:12px; border-bottom-width:24px; margin-left:57px"  ></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="Q1">
+		<p>Correct</p>
+		<a href="#Rr" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="Q2">
+		<p>InCorrect</p>
+		<a href="#Rr" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Rr">
+
+		<p>Rr</p>
+		<div>
+		<a href="#R2">
+		<div class="outline", style="top:25%; left:30%">
+		<div style="margin-top:-2px; margin-left:40px">
+		<div class="circle-cone"></div>
+		<div class="triangle-down"></div>
+		</div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#R1">
+		<div class="outline", style="top:65%; left:30%">
+		<div class="rectangle" , style="height:80px; width:150px; position:absolute; top:45px; margin-left:15px; background:white;"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#R2">
+		<div class="outline", style="top:25%; left:60%">
+		<div style="margin-top:0px; margin-left:15px">
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:20px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:80px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:140px"></div>
+		<div class="rectangle_fence" , style="height:180px; width:30px; margin-left:0px; margin-top:0px"></div>
+		<div class="rectangle_fence" , style="height:180px; width:30px; margin-left:120px; margin-top:0px"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#R2">
+		<div class="outline", style="top:65%; left:60%">
+		<div class="oval" , style="margin-top:50px; margin-left:15px"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="R1">
+		<p>Correct</p>
+		<a href="#Ss" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="R2">
+		<p>InCorrect</p>
+		<a href="#Ss" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Ss">
+
+		<p>Ss</p>
+		<div>
+		<a href="#S1">
+		<div class="outline", style="top:25%; left:30%">
+		<div class="star-5-points" , style="top:7px; left:-6px;"></div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#S2">
+		<div class="outline", style="top:65%; left:30%">
+		<div style="margin-top:-2px;">
+		<div class="triangle-up" , style="margin-left:15px;"></div>
+		<div class="triangle-up" , style="margin-left:75px;"></div>
+		<div class="triangle-up" , style="margin-left:135px;"></div>
+		<div class="rectangle_fence" , style="margin-left:15px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="margin-left:75px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="margin-left:135px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:180px; margin-left:0px; margin-top:120px"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#S2">
+		<div class="outline", style="top:25%; left:60%">
+   		<div class="diamond" , style= "margin-top:45px; margin-left:45px"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#S2">
+		<div class="outline", style="top:65%; left:60%">
+		<div style="margin-top:12px; margin-left:10px;">
+		<div class="rectangle" , style="height:150px; width:150px; background:rgba(0,150,255,1); position:absolute; top:5px; margin-left:5px; background-color:brown"></div>
+		<div class="rectangle" , style="height:60px; width:60px; background:rgba(0,150,255,1); position:absolute; top:15px; margin-left:15px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:15px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; background:rgba(0,150,255,1); position:absolute; top:15px; margin-left:85px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; background:rgba(0,150,255,1); position:absolute; top:85px; margin-left:85px; background-color:#b6edec"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="S1">
+		<p>Correct</p>
+		<a href="#Tt" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="S2">
+		<p>InCorrect</p>
+		<a href="#Tt" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Tt">
+
+		<p>Tt</p>
+		<div>
+		<a href="#T2">
+		<div class="outline", style="top:25%; left:30%">
+		<div style="margin-top:0px; margin-left:0px">
+		<div class="trapezoid-short"></div>
+		<div class="trapezoid-long"></div>
+		</div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#T2">
+		<div class="outline", style="top:65%; left:30%">
+   		<div class="circle" , style= "margin-top:15px; margin-left:15px"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#T2">
+		<div class="outline", style="top:25%; left:60%">
+		<div style="margin-top:42px; margin-left:25px">
+		<div class="rhomb"></div>
+		<div class="t-triangle" , style="border-left-width:12px; border-right-width:12px; border-bottom-width:24px; margin-left:57px"  ></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#T1">
+		<div class="outline", style="top:65%; left:60%">
+		<div class="t-triangle" , style="margin-top:35px; margin-left:37px;"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="T1">
+		<p>Correct</p>
+		<a href="#Uu" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="T2">
+		<p>InCorrect</p>
+		<a href="#Uu" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Uu">
+
+		<p>Uu</p>
+		<div>
+		<a href="#U2">
+		<div class="outline", style="top:25%; left:30%">
+		<div class="egg" , style= "margin:auto; "></div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#U2">
+		<div class="outline", style="top:65%; left:30%">
+		<div style="margin-top:80px; margin-left:0px">
+		<div class="rectangle "></div>
+		<div class="triangle-right" , style="margin-top:-47px;"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#U1">
+		<div class="outline", style="top:25%; left:60%">
+		<div class="umbrella" , style="margin-top:0px; margin-left:15px;"></div>
+		<div class="rectangle" , style="height:90px; width:10px; position:absolute; top:77px; margin-left:88px; background-color:brown;"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#U2">
+		<div class="outline", style="top:65%; left:60%">
+		<div class="yin-yang" , style="margin-top:40px; margin-left:40px"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="U1">
+		<p>Correct</p>
+		<a href="#Vv" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="U2">
+		<p>InCorrect</p>
+		<a href="#Vv" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Vv">
+
+		<p>Vv</p>
+		<div>
+		<a href="#V1">
+		<div class="outline", style="top:25%; left:30%">
+		<div class="rectangle" , style="height:90px; width:30px; position:absolute; top:0px; margin-left:75px; background-color:#fc99f7;"></div>
+		<div class="circle" , style="height:100px; width:100px; margin-top:70px; margin-left:40px; background-color:#fc99f7;"></div>
+		<div class="rectangle" , style="height:10px; width:30px; position:absolute; top:155px; margin-left:75px; background-color:#fc99f7;"></div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#V2">
+		<div class="outline", style="top:65%; left:30%">
+   		<div class="heart" , style= "margin-top:45px; margin-left:45px"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#V2">
+		<div class="outline", style="top:25%; left:60%">
+		<div style="margin-top:30px; margin-left:0px">
+		<div class="triangle-bottomright "></div>
+		<div class="trapezoid"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#V2">
+		<div class="outline", style="top:65%; left:60%">
+		<div style="margin-top:-2px; margin-left:40px">
+		<div class="circle-cone"></div>
+		<div class="triangle-down"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="V1">
+		<p>Correct</p>
+		<a href="#Ww" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="V2">
+		<p>InCorrect</p>
+		<a href="#Ww" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Ww">
+
+		<p>Ww</p>
+		<div>
+		<a href="#W2">
+		<div class="outline", style="top:25%; left:30%">
+		<div class="pacman"></div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#W1">
+		<div class="outline", style="top:65%; left:30%">
+		<div style="margin-top:12px; margin-left:10px;">
+		<div class="rectangle" , style="height:150px; width:150px; position:absolute; top:5px; margin-left:5px; background-color:brown"></div>
+		<div class="rectangle" , style="height:60px; width:60px; position:absolute; top:15px; margin-left:15px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; position:absolute; top:85px; margin-left:15px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; position:absolute; top:15px; margin-left:85px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; position:absolute; top:85px; margin-left:85px; background-color:#b6edec"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#W2">
+		<div class="outline", style="top:25%; left:60%">
+		<div class="moon" , style="margin-top:15px; margin-left:15px"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#W2">
+		<div class="outline", style="top:65%; left:60%">
+		<div class="t-triangle" , style="margin-top:35px; margin-left:37px;"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="W1">
+		<p>Correct</p>
+		<a href="#Xx" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="W2">
+		<p>InCorrect</p>
+		<a href="#Xx" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Xx">
+
+		<p>Xx</p>
+		<div>
+		<a href="#X2">
+		<div class="outline", style="top:25%; left:30%">
+   		<div class="heart" , style= "margin-top:45px; margin-left:45px"></div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#X2">
+		<div class="outline", style="top:65%; left:30%">
+		<div style="margin-top:-5px; margin-left:5px">
+		<div class="triangle-topright"></div>
+		<div class="jug"></div>
+		<div>
+		<div class="rectangle" , style="height:80px; width:30px; background:rgba(0,150,255,1); z-index:0; top:0; margin-left:140px">
+		<div class="rectangle" , style="height:60px; width:15px; background:#62676b; z-index:0; top:10px; left:3px; position:relative"></div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#X2">
+		<div class="outline", style="top:25%; left:60%">
+		<div style="margin-top:-2px;">
+		<div class="triangle-up" , style="margin-left:15px;"></div>
+		<div class="triangle-up" , style="margin-left:75px;"></div>
+		<div class="triangle-up" , style="margin-left:135px;"></div>
+		<div class="rectangle_fence" , style="margin-left:15px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="margin-left:75px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="margin-left:135px; margin-top:30px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:180px; margin-left:0px; margin-top:120px"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#X1">
+		<div class="outline", style="top:65%; left:60%">
+		<div class="rectangle" , style="height:20px; width:200px; background:rgba(0,150,255,1); position:absolute; top:40px; margin-left:-10px; background:black;"></div>
+		<div class="rectangle" , style="height:20px; width:200px; background:rgba(0,150,255,1); position:absolute; top:110px; margin-left:-10px; background:black;"></div>
+		<div class="rectangle" , style="height:150px; width:30px; background:rgba(0,150,255,1); position:absolute; top:10px; margin-left:-5px; background:red;"></div>
+		<div class="rectangle" , style="height:140px; width:30px; background:rgba(0,150,255,1); position:absolute; top:15px; margin-left:35px; background:green;"></div>
+		<div class="rectangle" , style="height:130px; width:30px; background:rgba(0,150,255,1); position:absolute; top:20px; margin-left:75px; background:yellow;"></div>
+		<div class="rectangle" , style="height:120px; width:30px; background:rgba(0,150,255,1); position:absolute; top:25px; margin-left:115px; background:purple;"></div>
+		<div class="rectangle" , style="height:110px; width:30px; background:rgba(0,150,255,1); position:absolute; top:30px; margin-left:155px; background:blue;"></div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="X1">
+		<p>Correct</p>
+		<a href="#Yy" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="X2">
+		<p>InCorrect</p>
+		<a href="#Yy" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Yy">
+
+		<p>Yy</p>
+		<div>
+		<a href="#Y1">
+		<div class="outline", style="top:25%; left:30%">
+		<div class="yin-yang" , style="margin-top:40px; margin-left:40px"></div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#Y2">
+		<div class="outline", style="top:65%; left:30%">
+		<div class="pacman"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#Y2">
+		<div class="outline", style="top:25%; left:60%">
+		<div style="margin-top:42px; margin-left:25px">
+		<div class="rhomb"></div>
+		<div class="t-triangle" , style="border-left-width:12px; border-right-width:12px; border-bottom-width:24px; margin-left:57px"  ></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#Y2">
+		<div class="outline", style="top:65%; left:60%">
+		<div style="margin-top:0px; margin-left:15px">
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:20px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:80px"></div>
+		<div class="rectangle_fence" , style="height:30px; width:120px; margin-left:0px; margin-top:140px"></div>
+		<div class="rectangle_fence" , style="height:180px; width:30px; margin-left:0px; margin-top:0px"></div>
+		<div class="rectangle_fence" , style="height:180px; width:30px; margin-left:120px; margin-top:0px"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="Y1">
+		<p>Correct</p>
+		<a href="#Zz" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+	<div id="Y2">
+		<p>InCorrect</p>
+		<a href="#Zz" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">Next</p>
+		</div>
+		</a>
+	</div>
+
+<div id="Zz">
+
+		<p>Zz</p>
+		<div>
+		<a href="#Z2">
+		<div class="outline", style="top:25%; left:30%">
+		<div style="margin-top:-2px; margin-left:40px">
+		<div class="circle-cone"></div>
+		<div class="triangle-down"></div>
+		</div>
+		</div>
+		</a>
+		</div>
+
+
+	<div>
+		<a href="#Z1">
+		<div class="outline", style="top:65%; left:30%">
+		<div class="zigzag"></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#Z2">
+		<div class="outline", style="top:25%; left:60%">
+		<div class="egg" , style= "margin:auto; "></div>
+		</div>
+		</a>
+	</div>
+
+	<div>
+		<a href="#Z2">
+		<div class="outline", style="top:65%; left:60%">
+		<div style="margin-top:12px; margin-left:10px;">
+		<div class="rectangle" , style="height:150px; width:150px; position:absolute; top:5px; margin-left:5px; background-color:brown"></div>
+		<div class="rectangle" , style="height:60px; width:60px; position:absolute; top:15px; margin-left:15px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; position:absolute; top:85px; margin-left:15px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; position:absolute; top:15px; margin-left:85px; background-color:#b6edec"></div>
+		<div class="rectangle" , style="height:60px; width:60px; position:absolute; top:85px; margin-left:85px; background-color:#b6edec"></div>
+		</div>
+		</div>
+		</a>
+	</div>
+
+</div>
+
+	<div id="Z1">
+		<p>Correct</p>
+		<a href="#end" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%;">
+		<p style="font-size:50px; text-align:center;">End</p>
+		</div>
+		</a>
+	</div>
+	<div id="Z2">
+		<p>InCorrect</p>
+		<a href="#end" , style="color:rgba(255,255,255,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">
+		<div class="outline", style="top:35%; left:42%">
+		<p style="font-size:50px; text-align:center;">End</p>
+		</div>
+		</a>
+	</div>
+
+<div id="end">
+</div>
+
+
+
+</div>
+
+
+
+
+<div style="margin-top:450px; text-align:center">
+<div>
+	<a href="#quiz" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px;">  Quiz </a>
+</div>
+	<a href="#alpha1" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Aa </a>
+	<a href="#alpha2" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Bb </a>
+	<a href="#alpha3" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Cc </a>
+	<a href="#alpha4" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Dd </a>
+	<a href="#alpha5" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Ee </a>
+	<a href="#alpha6" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Ff </a>
+	<a href="#alpha7" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Gg </a>
+	<a href="#alpha8" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Hh </a>
+	<a href="#alpha9" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Ii </a>
+	<a href="#alpha10" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Jj </a>
+	<a href="#alpha11" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Kk </a>
+	<a href="#alpha12" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Ll </a>
+	<a href="#alpha13" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Mm </a>
+	<a href="#alpha14" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Nn </a>
+	<a href="#alpha15" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Oo </a>
+	<a href="#alpha16" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Pp </a>
+	<a href="#alpha17" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Qq </a>
+	<a href="#alpha18" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Rr </a>
+	<a href="#alpha19" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Ss </a>
+	<a href="#alpha20" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Tt </a>
+	<a href="#alpha21" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Uu </a>
+	<a href="#alpha22" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Vv </a>
+	<a href="#alpha23" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Ww </a>
+	<a href="#alpha24" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Xx </a>
+	<a href="#alpha25" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Yy </a>
+	<a href="#alpha26" , style="color:rgba(0,0,0,1); text-decoration:none; font-family: comic sans ms; font-weight: bold; font-size:24px">Zz </a>
+</div>
+
+
+<div style="margin-top:300px; text-align:center">
+
+</body>
+
+</html>
